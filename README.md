@@ -159,3 +159,115 @@ Aserciones más comunes y útiles de Jest:
     - Comprueba si una promesa se resuelve o se rechaza.
 
 Estas son solo algunas de las aserciones más comunes que Jest proporciona. Puedes encontrar más información en la documentación oficial de Jest: [Expect](https://jestjs.io/docs/expect). Recuerda que elegir la aserción adecuada depende del tipo de prueba que estás escribiendo y de lo que deseas verificar en tu código.
+
+```json
+
+    // toBe.js
+    test('toBe', () => {
+    const valor = 1;
+    const otroValor = 1;
+    expect(valor).toBe(otroValor);
+    });
+
+    // toEqual.js
+    test('toEqual', () => {
+    const valor = { a: 1 };
+    const otroValor = { a: 1 };
+    expect(valor).toEqual(otroValor);
+    });
+
+    // toBeNull.js
+    test('toBeNull', () => {
+    const valor = null;
+    expect(valor).toBeNull();
+    expect(valor).not.toBeNull();
+    });
+
+    // toBeUndefined.js
+    test('toBeUndefined', () => {
+    const valor = undefined;
+    expect(valor).toBeUndefined();
+    expect(valor).not.toBeUndefined();
+    });
+
+    // toBeTruthy.js
+    test('toBeTruthy', () => {
+    const valor = 'test';
+    expect(valor).toBeTruthy();
+    expect(valor).toBeFalsy();
+    });
+
+    // toBeGreaterThan.js
+    test('toBeGreaterThan', () => {
+    const valor = 10;
+    const otroValor = 5;
+    expect(valor).toBeGreaterThan(otroValor);
+    expect(valor).toBeLessThan(otroValor);
+    });
+
+    // toMatch.js
+    test('toMatch', () => {
+    const string = 'test';
+    const expresionRegular = /test/;
+    expect(string).toMatch(expresionRegular);
+    });
+
+    // toContainString.js
+    test('toContain', () => {
+    const string = 'test';
+    const subcadena = 'es';
+    expect(string).toContain(subcadena);
+    });
+
+    // toHaveLength.js
+    test('toHaveLength', () => {
+    const array = ['a', 'b', 'c'];
+    const longitud = 3;
+    expect(array).toHaveLength(longitud);
+    });
+
+    // toContainArray.js
+    test('toContain', () => {
+    const array = ['a', 'b', 'c'];
+    const elemento = 'b';
+    expect(array).toContain(elemento);
+    expect(array).not.toContain('d');
+    });
+
+    // toHaveProperty.js
+    test('toHaveProperty', () => {
+    const objeto = { a: 1 };
+    const propiedad = 'a';
+    expect(objeto).toHaveProperty(propiedad);
+    });
+
+    // toMatchObject.js
+    test('toMatchObject', () => {
+    const objeto = { a: 1, b: 2, c: 3 };
+    const objetoEsperado = { a: 1 };
+    expect(objeto).toMatchObject(objetoEsperado);
+    });
+
+    // toHaveBeenCalled.js
+    test('toHaveBeenCalled', () => {
+    const funcion = jest.fn();
+    funcion();
+    expect(funcion).toHaveBeenCalled();
+    expect(funcion).not.toHaveBeenCalled();
+    });
+
+    // toHaveBeenCalledWith.js
+    test('toHaveBeenCalledWith', () => {
+    const funcion = jest.fn();
+    funcion('arg1', 'arg2');
+    expect(funcion).toHaveBeenCalledWith('arg1', 'arg2');
+    });
+
+    // resolves.js
+    test('resolves', () => {
+    const promesa = Promise.resolve('resuelto');
+    expect(promesa).resolves.toBe('resuelto');
+    expect(promesa).rejects.toBe('rechazado');
+    });
+    
+```
