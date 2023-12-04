@@ -95,3 +95,67 @@ npm run test
 ```
 
 Esto iniciará Jest y ejecutará todas las pruebas en la carpeta `test`. Asegúrate de tener algunas pruebas escritas en tus archivos de prueba para que Jest pueda ejecutarlas y mostrar los resultados.
+
+
+
+
+Aserciones más comunes y útiles de Jest:
+
+### Para Datos Primitivos:
+
+1. **`expect(valor).toBe(otroValor)`**
+   - Comprueba si dos valores son estrictamente iguales.
+
+2. **`expect(valor).toEqual(otroValor)`**
+   - Compara objetos o arrays para verificar si son equivalentes en términos de propiedades o elementos.
+
+3. **`expect(valor).toBeNull()` y `expect(valor).not.toBeNull()`**
+   - Comprueba si un valor es nulo o no es nulo.
+
+4. **`expect(valor).toBeUndefined()` y `expect(valor).not.toBeUndefined()`**
+   - Comprueba si un valor es `undefined` o no es `undefined`.
+
+5. **`expect(valor).toBeTruthy()` y `expect(valor).toBeFalsy()`**
+   - Comprueba si un valor es truthy o falsy.
+
+6. **`expect(valor).toBeGreaterThan(otroValor)` y `expect(valor).toBeLessThan(otroValor)`**
+   - Verifica si un número es mayor o menor que otro.
+
+### Para Strings:
+
+7. **`expect(string).toMatch(expresionRegular)`**
+   - Comprueba si un string coincide con una expresión regular.
+
+8. **`expect(string).toContain(subcadena)`**
+   - Verifica si un string contiene otra subcadena.
+
+### Para Arrays:
+
+9. **`expect(array).toHaveLength(longitud)`**
+   - Comprueba si un array tiene la longitud esperada.
+
+10. **`expect(array).toContain(elemento)` y `expect(array).not.toContain(elemento)`**
+    - Verifica si un array contiene o no contiene un elemento específico.
+
+### Para Objetos:
+
+11. **`expect(objeto).toHaveProperty(propiedad)`**
+    - Comprueba si un objeto tiene una propiedad específica.
+
+12. **`expect(objeto).toMatchObject(objetoEsperado)`**
+    - Verifica si un objeto coincide parcialmente con otro objeto.
+
+### Para Funciones:
+
+13. **`expect(funcion).toHaveBeenCalled()` y `expect(funcion).not.toHaveBeenCalled()`**
+    - Comprueba si una función ha sido o no ha sido llamada.
+
+14. **`expect(funcion).toHaveBeenCalledWith(arg1, arg2, ...)`**
+    - Verifica si una función ha sido llamada con argumentos específicos.
+
+### Para Promesas:
+
+15. **`expect(promesa).resolves` y `expect(promesa).rejects`**
+    - Comprueba si una promesa se resuelve o se rechaza.
+
+Estas son solo algunas de las aserciones más comunes que Jest proporciona. Puedes encontrar más información en la documentación oficial de Jest: [Expect](https://jestjs.io/docs/expect). Recuerda que elegir la aserción adecuada depende del tipo de prueba que estás escribiendo y de lo que deseas verificar en tu código.
