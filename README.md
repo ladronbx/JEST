@@ -24,11 +24,74 @@ Aquí hay algunos conceptos clave relacionados con Jest:
 Al utilizar Jest, los desarrolladores pueden asegurarse de que sus funciones y componentes individuales funcionen como se espera antes de integrarlos en una aplicación más grande. Esto ayuda a mantener la calidad del código y a prevenir errores antes de que lleguen a la etapa de producción.
 
 Comandos :
+### 1. Iniciar un nuevo proyecto de Node.js
+
+Ejecuta el siguiente comando para iniciar un nuevo proyecto de Node.js y seguir las instrucciones para configurar tu proyecto.
 
 ```bash
 npm init
 ```
 
+Esto creará un archivo `package.json` que contiene la configuración de tu proyecto.
+
+### 2. Instalar Jest
+
+Utiliza el siguiente comando para instalar Jest como una dependencia de desarrollo.
+
 ```bash
 sudo npm i jest -D
 ```
+
+### Otra forma de instalar Jest como dependencia de desarrollo
+
+a. Actualiza npm a la última versión globalmente.
+
+```bash
+npm install -g npm@latest
+```
+
+b. Instala Jest como una dependencia de desarrollo.
+
+```bash
+sudo npm i jest --save-dev
+```
+
+Esto asegura que npm esté actualizado y luego instala Jest como una dependencia de desarrollo.
+
+### 3. Configuración de la estructura del proyecto
+
+1. Crea una carpeta llamada `src` para tus archivos fuente.
+    
+    ```bash
+    mkdir src
+    ```
+    
+2. Crea una carpeta llamada `test` para tus archivos de prueba.
+    
+    ```bash
+    mkdir test
+    ```
+    
+3. Crea un archivo de prueba en la carpeta `test`, por ejemplo, `example.test.js`. Puedes utilizar cualquier nombre que desees.
+
+### 4. Actualiza el script de prueba en el archivo `package.json`
+
+Abre el archivo `package.json` y actualiza la sección de "scripts" para incluir el comando de prueba de Jest.
+
+```json
+"scripts": {
+  "test": "jest"
+},
+```
+
+Esto establece que cuando ejecutes `npm run test`, Jest se ejecutará para ejecutar tus pruebas.
+
+### 5. Ejecuta las pruebas
+
+Finalmente, ejecuta el siguiente comando para ejecutar las pruebas.
+
+```bash
+npm run test
+```
+
+Esto iniciará Jest y ejecutará todas las pruebas en la carpeta `test`. Asegúrate de tener algunas pruebas escritas en tus archivos de prueba para que Jest pueda ejecutarlas y mostrar los resultados.
